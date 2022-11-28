@@ -15,6 +15,21 @@ string[] firstArray = {"из", "под", "топота", "копыт", "пыль
 
 PrintArray(firstArray);
 
+int count = 3; // количество допустимых элементов
+
+string[] secondArray = new string[firstArray.Length];
+for (int i = 0; i < firstArray.Length; i++)
+{
+    if (firstArray[i].Length <= count)
+    {
+        secondArray[i] = firstArray[i];
+    }
+}
+
+Console.WriteLine();
+Console.WriteLine("Показаны элементы имеющегося массива не более чем с тремя символами: ");
+PrintArray(secondArray);
+
 void PrintArray(string[] Array)
 {
     for (int i = 0; i < Array.Length; i++)
